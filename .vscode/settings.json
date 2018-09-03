@@ -1,0 +1,4 @@
+{
+  "python.pythonPath": "/Users/joe/.venvs/make-it-art-api/bin/python",
+  "python.linting.pylintArgs": ["--load-plugins: pylint_django"]
+}
