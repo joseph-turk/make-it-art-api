@@ -57,6 +57,7 @@ local_settings.py
 db.sqlite3
 db.cnf
 media/
+make_it_art_api/config.py
 
 # Flask stuff:
 instance/
