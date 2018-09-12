@@ -27,7 +27,7 @@ SECRET_KEY = SECRET
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEBUG_STATUS
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = HOSTS
 
 
 # Application definition
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'artwork.apps.ArtworkConfig'
+    'artwork.apps.ArtworkConfig',
+    'events.apps.EventsConfig'
 ]
 
 MIDDLEWARE = [
@@ -113,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
