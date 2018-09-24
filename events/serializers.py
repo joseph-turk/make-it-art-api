@@ -17,6 +17,12 @@ class RegistrationEventSerializer(serializers.ModelSerializer):
         partial = True
 
 
+class RegistrationCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Registration
+        fields = ('name', 'email', 'is_wait_list', 'event')
+
+
 class EventSerializer(serializers.ModelSerializer):
     registrations = RegistrationEventSerializer(many=True, read_only=True)
 
