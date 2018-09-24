@@ -46,3 +46,12 @@ class AdminEventSingle(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticated,)
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+
+
+# Admin Registration Views
+
+class AdminRegistrationSingle(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+    queryset = Registration.objects.all()
+    serializer_class = RegistrationSerializer
