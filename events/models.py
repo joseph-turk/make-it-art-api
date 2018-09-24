@@ -41,7 +41,8 @@ class Event(models.Model):
 
 
 class Registration(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    event = models.ForeignKey(
+        Event, related_name='registrations', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     is_wait_list = models.BooleanField(default=False)

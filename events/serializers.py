@@ -2,15 +2,25 @@ from rest_framework import serializers
 from .models import Event, Registration
 
 
-class EventSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Event
-        fields = '__all__'
-        partial = True
-
-
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Registration
+        fields = '__all__'
+        partial = True
+        depth = 1
+
+
+class RegistrationEventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Registration
+        fields = ('id', 'name', 'email', 'is_wait_list')
+        partial = True
+
+
+class EventSerializer(serializers.ModelSerializer):
+    registrations = RegistrationEventSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Event
         fields = '__all__'
         partial = True

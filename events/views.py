@@ -18,6 +18,13 @@ class EventSingle(generics.RetrieveAPIView):
     serializer_class = EventSerializer
 
 
+# Public Registration Views
+
+class RegistrationSingle(generics.RetrieveAPIView):
+    queryset = Registration.objects.all()
+    serializer_class = RegistrationSerializer
+
+
 # Admin Event Views
 
 class AdminEventList(generics.ListCreateAPIView):
