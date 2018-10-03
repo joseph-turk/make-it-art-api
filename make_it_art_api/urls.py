@@ -8,6 +8,7 @@ urlpatterns = [
     path('artwork/', include('artwork.urls')),
     path('events/', include('events.urls')),
     path('content/', include('content.urls')),
+    path('lessons/', include('lessons.urls')),
     path('admin/', admin.site.urls),
     path('auth/obtain_token/', obtain_jwt_token),
     path('auth/refresh_token/', refresh_jwt_token)
