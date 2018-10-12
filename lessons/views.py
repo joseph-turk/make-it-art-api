@@ -20,3 +20,19 @@ class LessonSingle(generics.RetrieveAPIView):
 class TagList(generics.ListAPIView):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
+
+
+# Admin Views
+
+class AdminLessonList(generics.ListCreateAPIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+    queryset = Lesson.objects.all()
+    serializer_class = LessonSerializer
+
+
+class AdminLessonSingle(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+    queryset = Lesson.objects.all()
+    serializer_class = LessonSerializer
