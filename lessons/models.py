@@ -13,9 +13,11 @@ class Lesson(models.Model):
     name = models.CharField(max_length=1000)
     inspiration = models.TextField()
     outcomes = models.TextField()
+    materials = models.TextField()
     procedure = models.TextField()
     exit_expectations = models.TextField()
     finish_notes = models.TextField()
+    rubric = models.TextField()
     tags = models.ManyToManyField(Tag)
 
     def __str__(self):
