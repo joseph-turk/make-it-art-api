@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'artwork.apps.ArtworkConfig',
     'events.apps.EventsConfig',
-    'content.apps.ContentConfig'
+    'content.apps.ContentConfig',
+    'lessons.apps.LessonsConfig'
 ]
 
 MIDDLEWARE = [
