@@ -10,5 +10,8 @@ urlpatterns = [
     path('admin/past/', views.AdminEventListPast.as_view()),
     path('admin/<int:pk>/', views.AdminEventSingle.as_view()),
     # Registration URLs
-    path('registrations/<int:pk>/', views.RegistrationSingle.as_view())
+    path('registrations/<int:pk>/', views.RegistrationSingle.as_view()),
+    path('registrations/create/', views.create_registration),
+    path('admin/registrations/<int:pk>/',
+         views.AdminRegistrationSingle.as_view())
 ]

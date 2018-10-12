@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'artwork.apps.ArtworkConfig',
-    'events.apps.EventsConfig'
+    'events.apps.EventsConfig',
+    'content.apps.ContentConfig',
+    'lessons.apps.LessonsConfig'
 ]
 
 MIDDLEWARE = [
